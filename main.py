@@ -14,20 +14,28 @@ from random import randint
 # 4 And if the user got the secret number right, they will be informed that they have won,and how many tries that has taken them.
 
 # 5 If the user has not guessed correctly in their first attempt, they will be asked again to choose another number and so on until they win or until their eight attempts are done.
-
+    
 print("welcome to the guessing game where u guess numeros!")
 number = randint(1,100)
 print(number)
-guess = int(input("ESCOJE NUMERO CABRON: "))
-if guess == number:
-  print("good job u got lucky on the first try pleb")
-elif guess > number and guess <= 100:
-  print("Your number is greater than the chosen number.")
-elif guess < number and guess >= 1:
-  print("Your number is less than the chosen number.")
-elif guess < 1 or guess > 100:
-  print("Number is out of bounds.")
-
-if guess == number:
-  print("goodjob u got it on the last try")
-else: print("you lost")
+count = 0
+guess = int(input("ESCOJE NUMERO CARBON: "))
+while count < 8:
+  if guess == number:
+    print("good job u got lucky on the first try pleb")
+    break
+  elif guess > number and guess <= 100:
+    count += 1
+    print("Your number is greater than the chosen number.")
+    break
+  elif guess < number and guess >= 1:
+    count += 1
+    print("Your number is less than the chosen number.")
+    break
+  elif guess < 1 or guess > 100:
+    count += 1
+    print("Number is out of bounds.")
+    break
+    
+   
+int(input("Try again: "))
