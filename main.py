@@ -20,22 +20,18 @@ number = randint(1,100)
 print(number)
 count = 0
 guess = int(input("ESCOJE NUMERO CARBON: "))
-while count < 8:
+
+for i in range(8):
   if guess == number:
-    print("good job u got lucky on the first try pleb")
+    print("good job u got lucky")
     break
   elif guess > number and guess <= 100:
-    count += 1
     print("Your number is greater than the chosen number.")
-    break
   elif guess < number and guess >= 1:
-    count += 1
     print("Your number is less than the chosen number.")
-    break
   elif guess < 1 or guess > 100:
-    count += 1
     print("Number is out of bounds.")
-    break
-    
+
    
-int(input("Try again: "))
+
+
